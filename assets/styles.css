@@ -1,12 +1,91 @@
-body{
-    background-color:#f0f2f5;
+/* General body style */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.graph{
+
+/* Graph container styling */
+.graph {
     background-color: #ffffff;
-    border: 2px solid #ccc;
-    padding: 10px;
+    border: 1px solid #ddd;
+    padding: 20px;
     margin: 20px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    max-width: 800px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    max-width: 900px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Slider wrapper */
+.month-slider {
+    padding: 30px 0;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Prevent slider mark text from stacking */
+.rc-slider-mark-text {
+    white-space: nowrap;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Dropdown styling */
+.Select-control, .Select {
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+/* Center text with nice spacing */
+.text-center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+p{
+    margin-top:20px;
+}
+/* Headings */
+h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .graph, .month-slider {
+        padding: 15px;
+        max-width: 100%;
+    }
+    .month-slider{
+        margin-bottom:30px;
+    }
+    .rc-slider-mark-text {
+        white-space: normal !important;
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        max-width: 50px;
+        word-break: break-word;
+        line-height: 1.2;
+    }
+    .rc-slider-mark-text:last-child {
+        white-space:nowrap !important;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
 }
